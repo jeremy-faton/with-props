@@ -1,0 +1,46 @@
+{
+  "name": "with-props",
+  "version": "0.0.1",
+  "description": "Simple Higher Order Component to inject an initialised subset of props in a component",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "ts": "tsc --noEmit",
+    "build": "rimraf dist && mkdir dist && cp lib/index.d.ts dist/index.d.ts && rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremy-faton/with-props.git"
+  },
+  "keywords": [
+    "Higher Order Component",
+    "React"
+  ],
+  "author": "Jeremy Faton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremy-faton/with-props/issues"
+  },
+  "homepage": "https://github.com/jeremy-faton/with-props#readme",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/react": "^18.0.27",
+    "rollup": "^3.14.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.2",
+    "rimraf": "^4.1.2",
+    "tslib": "^2.5.0"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/*.d.ts"
+  ]
+}
