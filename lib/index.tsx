@@ -1,5 +1,6 @@
 import React from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
+
 /**
  * Simple Higher Order Component to inject an initialised subset of props in a component.
  *

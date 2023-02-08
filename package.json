@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "ts": "tsc --noEmit",
+    "lint": "eslint --fix --cache",
     "build": "rimraf dist && mkdir dist && cp lib/index.d.ts dist/index.d.ts && rollup -c"
   },
   "repository": {
@@ -31,6 +32,13 @@
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/react": "^18.0.27",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
     "rimraf": "^4.1.2",
     "rollup": "^3.14.0",
     "tslib": "^2.5.0",
