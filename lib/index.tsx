@@ -9,10 +9,10 @@ import hoistNonReactStatics from 'hoist-non-react-statics'
  *
  * @author Jeremy Faton
  */
-const withProps = function<P extends React.PropsWithChildren>(Composed: React.ComponentType<P>, props: P) {
+const withProps = function<P extends React.PropsWithChildren>(Composed: React.ComponentType<P>, props: P): React.ComponentType<P> {
   class WithProps extends React.Component<P> {
-    render() {
-      return <Composed {...{...props, ...this.props}}>{this.props.children}</Composed>
+    render (): React.ReactNode {
+      return <Composed {...{ ...props, ...this.props }}>{this.props.children}</Composed>
     }
   }
   hoistNonReactStatics(WithProps, Composed)

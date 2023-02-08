@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "ts": "tsc --noEmit",
-    "lint": "eslint --fix --cache",
+    "lint": "eslint ./lib --fix --cache",
     "build": "rimraf dist && mkdir dist && cp lib/index.d.ts dist/index.d.ts && rollup -c"
   },
   "repository": {

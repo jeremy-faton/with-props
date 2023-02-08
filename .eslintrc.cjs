@@ -8,9 +8,11 @@ module.exports = {
     'plugin:react/recommended',
     'standard-with-typescript'
   ],
+  ignorePatterns: ['*.d.ts'],
   overrides: [
   ],
   parserOptions: {
+    project: './tsconfig.json',
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
