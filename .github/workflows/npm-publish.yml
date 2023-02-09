@@ -17,6 +17,8 @@ jobs:
           node-version: 16
       - run: npm install
       - run: npm audit
+      - run: npm run ts
+      - run: npm run lint
 
   publish-npm:
     needs: test
