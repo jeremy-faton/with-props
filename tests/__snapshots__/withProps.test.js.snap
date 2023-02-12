@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`injects properties 1`] = `
+[
+  <p>
+    value1
+  </p>,
+  "foobar",
+  <p>
+    value2
+  </p>,
+]
+`;
+
+exports[`overrides injected properties 1`] = `
+[
+  <p>
+    value3
+  </p>,
+  "foobar",
+]
+`;

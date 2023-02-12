@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
     "target": "ES2021",
-    "jsx": "react",                            
-    "module": "ESNext",                             
-    "moduleResolution": "node",       
-    "esModuleInterop": true,                             
-    "forceConsistentCasingInFileNames": true,            
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "rootDir": "./lib"
+    "rootDir": "./lib",
+    "baseUrl": "./",
+    "paths": {
+      "lib/*": [
+        "lib/*"
+      ]
+    }
   }
 }
