@@ -20,3 +20,9 @@ exports[`overrides injected properties 1`] = `
   "foobar",
 ]
 `;
+
+exports[`works with DOM 1`] = `
+<input
+  type="password"
+/>
+`;
