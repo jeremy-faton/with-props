@@ -7,7 +7,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "rootDir": "./lib",
+    "rootDir": "./",
     "baseUrl": "./",
     "paths": {
       "lib/*": [
