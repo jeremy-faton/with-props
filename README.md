@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/with-props-hoc.svg)](https://badge.fury.io/js/with-props-hoc)
 [![build](https://github.com/jeremy-faton/with-props/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jeremy-faton/with-props/actions/workflows/npm-publish.yml)
+[![Test](https://github.com/jeremy-faton/with-props/actions/workflows/test.yml/badge.svg)](https://github.com/jeremy-faton/with-props/actions/workflows/test.yml)
 
 Higher order component to inject a subset of props for code reuse with TypeScript type declaration.
 
