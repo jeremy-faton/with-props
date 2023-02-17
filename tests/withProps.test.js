@@ -1,6 +1,6 @@
 import React, { createRef } from 'react'
 import renderer from 'react-test-renderer'
-import withProps from '../lib/index'
+import withProps from '../dist/index'
 import TestComponent from './TestComponent'
 import TestInputComponent from './TestInputComponent'
 import TestRefComponent from './TestRefComponent'
