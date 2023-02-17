@@ -5,7 +5,7 @@ interface Props extends React.PropsWithChildren {
   bar?: string
 }
 
-const TestComponent: React.FC<Props> = ({ foo, bar, children }) => {
+function TestComponent ({ foo, bar, children }: Props): React.ReactNode {
   return (
     <>
       {

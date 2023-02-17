@@ -14,9 +14,20 @@ import React from 'react'
 const withProps = (Composed, props) => own => <Composed {...{ ...props,...own }}>{own.children}</Composed>
 ```
 
-Non-react statics methods are copied over using [hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics).
+Improvements over this one-liner are :
 
-Be aware of other [HOC caveats](https://reactjs.org/docs/higher-order-components.html#caveats) when using this.
+- Non-react statics methods are copied over using [hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics).
+
+- ref is forwarded to the component being wrapped
+
+- displayName will appear as 
+```js
+`withProps${Component.displayName}`
+```
+
+- TypeScript type declaration
+
+⚠ Be aware of other [HOC caveats](https://reactjs.org/docs/higher-order-components.html#caveats) when using this. ⚠
 
 ## Usage
 

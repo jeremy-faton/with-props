@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1676563021186" clover="3.2.0">
+  <project timestamp="1676563021187" name="All files">
+    <metrics statements="11" coveredstatements="11" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="6" elements="25" coveredelements="25" complexity="0" loc="11" ncloc="11" packages="2" files="4" classes="4"/>
+    <package name="lib">
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="/workspaces/withProps/lib/index.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="29" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="8" type="stmt"/>
+        <line num="31" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="tests">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="TestComponent.tsx" path="/workspaces/withProps/tests/TestComponent.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="9" count="4" type="stmt"/>
+      </file>
+      <file name="TestInputComponent.tsx" path="/workspaces/withProps/tests/TestInputComponent.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="TestRefComponent.tsx" path="/workspaces/withProps/tests/TestRefComponent.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

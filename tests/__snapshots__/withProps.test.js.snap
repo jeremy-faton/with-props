@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`forwards ref 1`] = `
+{
+  "current": {
+    "test": "value",
+  },
+}
+`;
+
+exports[`has a display name 1`] = `"withProps(TestComponent)"`;
+
+exports[`injects children property 1`] = `<input />`;
+
 exports[`injects properties 1`] = `
 [
   <p>
@@ -10,6 +22,12 @@ exports[`injects properties 1`] = `
     value2
   </p>,
 ]
+`;
+
+exports[`overrides injected children property 1`] = `
+<p>
+  test
+</p>
 `;
 
 exports[`overrides injected properties 1`] = `
