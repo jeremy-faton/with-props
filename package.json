@@ -1,6 +1,6 @@
 {
   "name": "with-props-hoc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Higher Order Component to inject an initialised subset of props in a component",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.js",
