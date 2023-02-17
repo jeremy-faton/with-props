@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/jeremy-faton/with-props#readme",
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^16 || ^17 || ^18.2.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",

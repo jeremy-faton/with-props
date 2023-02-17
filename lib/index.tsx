@@ -1,5 +1,15 @@
-import React from 'react'
-import hoistNonReactStatics from 'hoist-non-react-statics'
+import React, {
+  type PropsWithChildren,
+  type PropsWithRef as BasePropsWithRef,
+  type ForwardedRef,
+  type RefAttributes,
+  type ForwardRefExoticComponent,
+  type ComponentType
+} from 'react'
+import hoistNonReactStatics, { type NonReactStatics } from 'hoist-non-react-statics'
+
+type PropsWithForwardedRef<T> = PropsWithChildren & { forwardedRef?: ForwardedRef<T> }
+type PropsWithRef<T> = PropsWithChildren & BasePropsWithRef<T>
 
 /**
  * Simple Higher Order Component to inject an initialised subset of props in a component.
@@ -9,14 +19,23 @@ import hoistNonReactStatics from 'hoist-non-react-statics'
  *
  * @author Jeremy Faton
  */
-const withProps = function<P extends React.PropsWithChildren>(Composed: React.ComponentType<P>, props: P): React.ComponentType<P> {
-  class WithProps extends React.Component<P> {
+const withProps = function<T> (Composed: React.ComponentType<PropsWithRef<T>>, props: PropsWithRef<T>): ForwardRefExoticComponent<RefAttributes<T>> & NonReactStatics<ComponentType<PropsWithRef<T>>> {
+  class WithProps extends React.Component<PropsWithForwardedRef<T>> {
     render (): React.ReactNode {
-      return <Composed {...{ ...props, ...this.props }}>{this.props.children}</Composed>
+      const { forwardedRef, children, ...rest } = this.props
+      return (
+        <Composed ref={forwardedRef} {...{ ...props, ...rest }}>
+          {children ?? props.children}
+        </Composed>
+      )
     }
   }
-  hoistNonReactStatics(WithProps, Composed)
-  return WithProps
+  const WithPropsAndForwardedRef = React.forwardRef<T>((props, ref) => (
+    <WithProps {...props} forwardedRef={ref} />
+  ))
+  const name = Composed.displayName ?? Composed.name
+  WithPropsAndForwardedRef.displayName = `withProps(${name})`
+  return hoistNonReactStatics(WithPropsAndForwardedRef, Composed)
 }
 
 export default withProps

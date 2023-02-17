@@ -1,5 +1,10 @@
-import React from "react"
+import React, {
+  PropsWithRef,
+  PropsWithChildren
+} from 'react'
 
-declare function withProps<P extends React.PropsWithChildren>(Composed: React.ComponentType<P>, props: P): React.ComponentType<P>
+type Props<T> = PropsWithChildren & PropsWithRef<T>
+
+declare function withProps<T>(Composed: React.ComponentType<Props<T>>, props: Props<T>): React.ComponentType<Props<T>>
 
 export = withProps
